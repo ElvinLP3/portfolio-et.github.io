@@ -1,9 +1,146 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Titre de la page</title>
-  </head>
-  <body>
-    <!-- Contenu de la page -->
-  </body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section p, .section li {
+            line-height: 1.6;
+        }
+        .skill-list, .experience-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skill-list li, .experience-list li {
+            background: #f4f4f4;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-left: 5px solid #333;
+        }
+        .experience-list h3 {
+            margin: 0 0 10px;
+        }
+        .experience-list p {
+            margin: 5px 0;
+        }
+        .contact {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .contact p {
+            margin: 10px 0;
+        }
+        .contact a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mon Portfolio</h1>
+        <p>Bienvenue sur mon portfolio professionnel</p>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>À Propos de Moi</h2>
+            <p>Bonjour, je m'appelle [Votre Nom]. Je suis [Votre Profession] avec une passion pour [Votre Passion]. Avec une expérience de [Nombre d'Années] ans dans le domaine, j'ai acquis des compétences solides en [Domaine/Technologie].</p>
+        </div>
+
+        <div class="section">
+            <h2>Expérience Professionnelle</h2>
+            <ul class="experience-list">
+                <li>
+                    <h3>[Poste] - [Entreprise]</h3>
+                    <p><strong>Durée :</strong> [Mois/Année] - [Mois/Année]</p>
+                    <p><strong>Description :</strong> [Description du poste et réalisations]</p>
+                </li>
+                <!-- Répétez les éléments de la liste pour chaque expérience -->
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Compétences</h2>
+            <ul class="skill-list">
+                <li>[Compétence 1]</li>
+                <li>[Compétence 2]</li>
+                <li>[Compétence 3]</li>
+                <!-- Ajoutez d'autres compétences si nécessaire -->
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Contact</h2>
+            <div class="contact">
+                <p><strong>Email :</strong> <a href="mailto:votre.email@example.com">votre.email@example.com</a></p>
+                <p><strong>Téléphone :</strong> [Votre Numéro de Téléphone]</p>
+                <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/votreprofil" target="_blank">linkedin.com/in/votreprofil</a></p>
+                <p><strong>GitHub :</strong> <a href="https://github.com/votreprofil" target="_blank">github.com/votreprofil</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+</body>
 </html>
