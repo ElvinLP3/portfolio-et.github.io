@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Portfolio - Elvin Touz</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
             background-color: #f4f4f4;
             color: #333;
         }
@@ -21,7 +20,7 @@
         }
         header h1 {
             margin: 0;
-            font-size: 3em;
+            font-size: 2.5em;
         }
         nav {
             background-color: #cc0000;
@@ -33,24 +32,25 @@
             padding: 15px 20px;
             text-decoration: none;
             text-transform: uppercase;
+            font-weight: bold;
         }
         nav a:hover {
             background-color: #990000;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
             background-color: white;
+            border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         h2 {
             color: #003366;
+            border-bottom: 2px solid #cc0000;
+            padding-bottom: 5px;
             margin-bottom: 20px;
             font-size: 2em;
-            border-bottom: 2px solid #003366;
-            display: inline-block;
-            padding-bottom: 5px;
         }
         .section {
             display: none;
@@ -58,116 +58,112 @@
         .section.active {
             display: block;
         }
-        .skill-list, .experience-list {
-            list-style-type: none;
+        ul {
+            list-style: none;
             padding: 0;
         }
-        .skill-list li, .experience-list li {
-            background: #f4f4f4;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-left: 5px solid #cc0000;
+        li {
+            margin-bottom: 15px;
         }
-        .experience-list h3 {
-            margin: 0 0 10px;
+        li h3 {
+            color: #003366;
+            margin-bottom: 5px;
         }
-        .experience-list p {
+        li p {
             margin: 5px 0;
-        }
-        .contact {
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .contact p {
-            margin: 10px 0;
         }
         .contact a {
             color: #cc0000;
-            text-decoration: none;
             font-weight: bold;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
         }
         footer {
             background-color: #003366;
             color: white;
             text-align: center;
-            padding: 10px 20px;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-            .container {
-                padding: 10px;
-            }
-            nav a {
-                padding: 10px;
-                font-size: 0.9em;
-            }
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Mon Portfolio</h1>
-        <p>Bienvenue sur mon portfolio professionnel</p>
+        <h1>Elvin Touz</h1>
+        <p>Étudiant en Licence de Commercialisation des Produits et Services Sportifs</p>
     </header>
 
     <nav>
-        <a href="#" class="nav-link" data-target="home">Accueil</a>
         <a href="#" class="nav-link" data-target="about">À Propos</a>
         <a href="#" class="nav-link" data-target="experience">Expérience</a>
         <a href="#" class="nav-link" data-target="skills">Compétences</a>
+        <a href="#" class="nav-link" data-target="interests">Centres d'Intérêt</a>
         <a href="#" class="nav-link" data-target="contact">Contact</a>
     </nav>
 
     <div class="container">
-        <div id="home" class="section active">
-            <h2>Accueil</h2>
-            <p>Bienvenue sur mon portfolio professionnel. Découvrez mes compétences, mon expérience et comment me contacter. Utilisez le menu ci-dessus pour naviguer entre les différentes sections.</p>
-        </div>
-
-        <div id="about" class="section">
-            <h2>À Propos de Moi</h2>
-            <p>Bonjour, je m'appelle [Votre Nom]. Je suis [Votre Profession] avec une passion pour [Votre Passion]. Avec une expérience de [Nombre d'Années] ans dans le domaine, j'ai acquis des compétences solides en [Domaine/Technologie].</p>
+        <div id="about" class="section active">
+            <h2>À Propos</h2>
+            <p>Bonjour, je m'appelle Elvin Touz. J'ai 20 ans et je suis en alternance dans l'entreprise Fitness Park ainsi qu'à l'école ILEPS à Cergy. Actuellement étudiant en Licence Professionnelle de Commercialisation des Produits et Services Sportifs, je bénéficie d’une expérience solide dans le commerce acquise au travers de stages et d’un emploi polyvalent. Passionné par le sport, je suis proactif et fiable dans la réalisation de mes missions.</p>
         </div>
 
         <div id="experience" class="section">
             <h2>Expérience Professionnelle</h2>
-            <ul class="experience-list">
+            <ul>
                 <li>
-                    <h3>[Poste] - [Entreprise]</h3>
-                    <p><strong>Durée :</strong> [Mois/Année] - [Mois/Année]</p>
-                    <p><strong>Description :</strong> [Description du poste et réalisations]</p>
+                    <h3>Alternant Commercial - Fitness Park</h3>
+                    <p><strong>Durée :</strong> En cours</p>
+                    <p><strong>Description :</strong> Gestion des abonnements, création de campagnes marketing, et communication digitale.</p>
                 </li>
-                <!-- Répétez les éléments de la liste pour chaque expérience -->
+                <li>
+                    <h3>Conseiller de Vente (Stage) - Decathlon Vélizy II</h3>
+                    <p><strong>Durée :</strong> Avril 2023 - Juin 2023</p>
+                    <p><strong>Description :</strong> Gestion des commandes Click & Collect, application des règles de merchandising, encaissement, et réception des marchandises.</p>
+                </li>
+                <li>
+                    <h3>Conseiller de Vente (Stage) - Decathlon La Défense</h3>
+                    <p><strong>Durée :</strong> Décembre 2022 - Janvier 2023</p>
+                    <p><strong>Description :</strong> Mise en rayon, réception des marchandises, et conseil client.</p>
+                </li>
             </ul>
         </div>
 
         <div id="skills" class="section">
             <h2>Compétences</h2>
-            <ul class="skill-list">
-                <li>[Compétence 1]</li>
-                <li>[Compétence 2]</li>
-                <li>[Compétence 3]</li>
-                <!-- Ajoutez d'autres compétences si nécessaire -->
+            <ul>
+                <li>Communication et marketing digital</li>
+                <li>Gestion de projets</li>
+                <li>Création de contenu visuel</li>
+                <li>Accueil et conseil client</li>
+                <li>Esprit d'équipe et proactivité</li>
+            </ul>
+        </div>
+
+        <div id="interests" class="section">
+            <h2>Centres d'Intérêt</h2>
+            <ul>
+                <li>Musculation</li>
+                <li>Football (8 ans en club)</li>
+                <li>Voyages : Turquie, Émirats Arabes Unis, États-Unis, Royaume-Uni, Maroc</li>
+                <li>Géographie</li>
             </ul>
         </div>
 
         <div id="contact" class="section">
             <h2>Contact</h2>
             <div class="contact">
-                <p><strong>Email :</strong> <a href="mailto:votre.email@example.com">votre.email@example.com</a></p>
-                <p><strong>Téléphone :</strong> [Votre Numéro de Téléphone]</p>
-                <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/votreprofil" target="_blank">linkedin.com/in/votreprofil</a></p>
-                <p><strong>GitHub :</strong> <a href="https://github.com/votreprofil" target="_blank">github.com/votreprofil</a></p>
+                <p><strong>Email :</strong> <a href="mailto:elvin280404@gmail.com">elvin280404@gmail.com</a></p>
+                <p><strong>Téléphone :</strong> 06 50 36 25 49</p>
+                <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/elvin-touz" target="_blank">linkedin.com/in/elvin-touz</a></p>
+                <p><strong>GitHub :</strong> <a href="https://github.com/elvintouz" target="_blank">github.com/elvintouz</a></p>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+        <p>&copy; 2024 Elvin Touz. Tous droits réservés.</p>
     </footer>
 
     <script>
