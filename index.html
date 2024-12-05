@@ -14,18 +14,28 @@
             color: #333;
         }
         header {
-            background-color: #333;
+            background-color: #003366;
             color: white;
-            padding: 60px 20px;
+            padding: 20px;
             text-align: center;
         }
         header h1 {
             margin: 0;
             font-size: 3em;
         }
-        header p {
-            margin: 10px 0 0;
-            font-size: 1.2em;
+        nav {
+            background-color: #cc0000;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #990000;
         }
         .container {
             max-width: 1000px;
@@ -35,18 +45,18 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         h2 {
-            color: #333;
+            color: #003366;
             margin-bottom: 20px;
             font-size: 2em;
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #003366;
             display: inline-block;
             padding-bottom: 5px;
         }
         .section {
-            margin-bottom: 40px;
+            display: none;
         }
-        .section p, .section li {
-            line-height: 1.6;
+        .section.active {
+            display: block;
         }
         .skill-list, .experience-list {
             list-style-type: none;
@@ -56,7 +66,7 @@
             background: #f4f4f4;
             margin-bottom: 10px;
             padding: 15px;
-            border-left: 5px solid #333;
+            border-left: 5px solid #cc0000;
         }
         .experience-list h3 {
             margin: 0 0 10px;
@@ -74,12 +84,12 @@
             margin: 10px 0;
         }
         .contact a {
-            color: #333;
+            color: #cc0000;
             text-decoration: none;
             font-weight: bold;
         }
         footer {
-            background-color: #333;
+            background-color: #003366;
             color: white;
             text-align: center;
             padding: 10px 20px;
@@ -91,6 +101,10 @@
             .container {
                 padding: 10px;
             }
+            nav a {
+                padding: 10px;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -100,13 +114,26 @@
         <p>Bienvenue sur mon portfolio professionnel</p>
     </header>
 
+    <nav>
+        <a href="#" class="nav-link" data-target="home">Accueil</a>
+        <a href="#" class="nav-link" data-target="about">À Propos</a>
+        <a href="#" class="nav-link" data-target="experience">Expérience</a>
+        <a href="#" class="nav-link" data-target="skills">Compétences</a>
+        <a href="#" class="nav-link" data-target="contact">Contact</a>
+    </nav>
+
     <div class="container">
-        <div class="section">
+        <div id="home" class="section active">
+            <h2>Accueil</h2>
+            <p>Bienvenue sur mon portfolio professionnel. Découvrez mes compétences, mon expérience et comment me contacter. Utilisez le menu ci-dessus pour naviguer entre les différentes sections.</p>
+        </div>
+
+        <div id="about" class="section">
             <h2>À Propos de Moi</h2>
             <p>Bonjour, je m'appelle [Votre Nom]. Je suis [Votre Profession] avec une passion pour [Votre Passion]. Avec une expérience de [Nombre d'Années] ans dans le domaine, j'ai acquis des compétences solides en [Domaine/Technologie].</p>
         </div>
 
-        <div class="section">
+        <div id="experience" class="section">
             <h2>Expérience Professionnelle</h2>
             <ul class="experience-list">
                 <li>
@@ -118,7 +145,7 @@
             </ul>
         </div>
 
-        <div class="section">
+        <div id="skills" class="section">
             <h2>Compétences</h2>
             <ul class="skill-list">
                 <li>[Compétence 1]</li>
@@ -128,7 +155,7 @@
             </ul>
         </div>
 
-        <div class="section">
+        <div id="contact" class="section">
             <h2>Contact</h2>
             <div class="contact">
                 <p><strong>Email :</strong> <a href="mailto:votre.email@example.com">votre.email@example.com</a></p>
@@ -142,5 +169,17 @@
     <footer>
         <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(this.dataset.target).classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
