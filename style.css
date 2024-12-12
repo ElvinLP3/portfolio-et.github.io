@@ -1,4 +1,4 @@
- <style>
+<style>
         /* Styles généraux */
         body {
             font-family: 'Poppins', sans-serif;
@@ -176,6 +176,9 @@
             .profile-photo {
                 width: 80px;
                 height: 80px;
+            }
+        }
+    </style>
             }
         }
     </style>
