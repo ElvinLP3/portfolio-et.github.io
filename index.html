@@ -6,11 +6,186 @@
     <title>Portfolio CV - Elvin Touz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-     <link href="a" rel="stylesheet">
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #00509e, #003366);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        /* Photo de profil */
+        .profile-photo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid white;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #003366;
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #00509e;
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #00509e;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #cc0000, #ff4d4d);
+            display: block;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #f4f4f4;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-left: 5px solid #00509e;
+            border-radius: 5px;
+        }
+
+        ul li:hover {
+            background: #e6f0ff;
+        }
+
+        .contact a {
+            color: #cc0000;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #ff4d4d;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #00509e;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            nav a {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+
+            .profile-photo {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
+        <div class="profile-photo">
+            <img src="IMG_0441.jpg" alt="Photo de profil">
+        </div>
         <h1>Portfolio CV - Elvin Touz</h1>
         <p>Étudiant en Licence de Commercialisation des Produits et Services Sportifs</p>
     </header>
@@ -36,11 +211,6 @@
                     <h3>Alternant Commercial - Fitness Park</h3>
                     <p><strong>Durée :</strong> En cours</p>
                     <p><strong>Description :</strong> Gestion des abonnements, création de campagnes marketing, et communication digitale.</p>
-                </li>
-                <li>
-                    <h3>Conseiller de Vente (Stage) - Decathlon Vélizy II</h3>
-                    <p><strong>Durée :</strong> Avril 2023 - Juin 2023</p>
-                    <p><strong>Description :</strong> Gestion des commandes Click & Collect, application des règles de merchandising, encaissement, et réception des marchandises.</p>
                 </li>
             </ul>
         </div>
@@ -93,3 +263,4 @@
     </script>
 </body>
 </html>
+
