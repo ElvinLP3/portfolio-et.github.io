@@ -6,12 +6,191 @@
     <title>Portfolio CV - Elvin Touz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-   
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(120deg, #84c5f4, #d6eaf8);
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2a3e52;
+            color: white;
+            padding: 1.5em 2em;
+            border-bottom: 5px solid #84c5f4;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1em;
+            margin-top: 0.5em;
+            color: #b2c4d1;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #84c5f4;
+            overflow: hidden;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #34495e;
+            padding: 1em 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-link {
+            margin: 0 1.5em;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #84c5f4;
+        }
+
+        .nav-link:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #84c5f4;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 0 1em;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 2px solid #84c5f4;
+            background: #f9f9f9;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 1em;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .tab:hover {
+            background: #84c5f4;
+            color: white;
+        }
+
+        .tab.active {
+            background: #2a3e52;
+            color: white;
+        }
+
+        .section {
+            display: none;
+            padding: 2em;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5em;
+            background: #2a3e52;
+            color: white;
+            font-size: 0.9em;
+            margin-top: 2em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 0.5em 0;
+        }
+
+        a {
+            color: #2a3e52;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #84c5f4;
+            text-decoration: underline;
+        }
+
+        .cv-download {
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        .cv-download a {
+            display: inline-block;
+            padding: 1em 2em;
+            background: #2a3e52;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .cv-download a:hover {
+            background: #84c5f4;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Portfolio CV - Elvin Touz</h1>
-        <p>Étudiant en Licence de Commercialisation des Produits et Services Sportifs</p>
+        <div>
+            <h1>Portfolio CV</h1>
+            <p>Étudiant en Licence de Commercialisation des Produits et Services Sportifs</p>
+        </div>
+        <div class="profile-pic">
+            <img src="https://via.placeholder.com/100" alt="Photo de profil">
+        </div>
     </header>
 
     <nav>
@@ -20,12 +199,13 @@
         <a href="#" class="nav-link" data-target="skills">Compétences</a>
         <a href="#" class="nav-link" data-target="interests">Centres d'Intérêt</a>
         <a href="#" class="nav-link" data-target="contact">Contact</a>
+        <a href="#" class="nav-link" data-target="cv">Télécharger CV</a>
     </nav>
 
     <div class="container">
         <div id="about" class="section active">
             <h2>À Propos</h2>
-            <p>Bonjour, je m'appelle Elvin Touz. J'ai 20 ans et je suis en alternance chez Fitness Park, tout en suivant un cursus à l'école ILEPS à Cergy. Actuellement étudiant en Licence Professionnelle de Commercialisation des Produits et Services Sportifs, je suis passionné par le sport, la communication, et le développement personnel.</p>
+            <p>Bonjour, je m'appelle Elvin Touz. J'ai 20 ans et je suis en alternance chez Fitness Park, tout en suivant un cursus à l'école ILEPS à Cergy.</p>
         </div>
 
         <div id="experience" class="section">
@@ -34,12 +214,6 @@
                 <li>
                     <h3>Alternant Commercial - Fitness Park</h3>
                     <p><strong>Durée :</strong> En cours</p>
-                    <p><strong>Description :</strong> Gestion des abonnements, création de campagnes marketing, et communication digitale.</p>
-                </li>
-                <li>
-                    <h3>Conseiller de Vente (Stage) - Decathlon Vélizy II</h3>
-                    <p><strong>Durée :</strong> Avril 2023 - Juin 2023</p>
-                    <p><strong>Description :</strong> Gestion des commandes Click & Collect, application des règles de merchandising, encaissement, et réception des marchandises.</p>
                 </li>
             </ul>
         </div>
@@ -48,10 +222,7 @@
             <h2>Compétences</h2>
             <ul>
                 <li>Communication et marketing digital</li>
-                <li>Gestion de projets</li>
                 <li>Création de contenu visuel</li>
-                <li>Accueil et conseil client</li>
-                <li>Esprit d'équipe et proactivité</li>
             </ul>
         </div>
 
@@ -59,18 +230,19 @@
             <h2>Centres d'Intérêt</h2>
             <ul>
                 <li>Musculation</li>
-                <li>Football (8 ans en club)</li>
-                <li>Voyages : Turquie, Émirats Arabes Unis, États-Unis, Royaume-Uni, Maroc</li>
-                <li>Géographie</li>
+                <li>Football</li>
             </ul>
         </div>
 
         <div id="contact" class="section">
             <h2>Contact</h2>
-            <div class="contact">
-                <p><strong>Email :</strong> <a href="mailto:elvin280404@gmail.com">elvin280404@gmail.com</a></p>
-                <p><strong>Téléphone :</strong> 06 50 36 25 49</p>
-                <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/elvin-touz" target="_blank">linkedin.com/in/elvin-touz</a></p>
+            <p>Email: <a href="mailto:elvin280404@gmail.com">elvin280404@gmail.com</a></p>
+        </div>
+
+        <div id="cv" class="section">
+            <h2>Télécharger mon CV</h2>
+            <div class="cv-download">
+                <a href="alternance cv.pdf" download="CV_Elvin_Touz.pdf">Télécharger le CV</a>
             </div>
         </div>
     </div>
@@ -80,13 +252,17 @@
     </footer>
 
     <script>
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
+        const tabs = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', e => {
                 e.preventDefault();
-                document.querySelectorAll('.section').forEach(section => {
-                    section.classList.remove('active');
-                });
-                document.getElementById(this.dataset.target).classList.add('active');
+                tabs.forEach(t => t.classList.remove('active'));
+                sections.forEach(section => section.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.target).classList.add('active');
             });
         });
     </script>
